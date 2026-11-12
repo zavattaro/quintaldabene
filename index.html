@@ -58,7 +58,7 @@ footer{padding:26px 0 40px;font-family:Arial,sans-serif;font-size:13px;color:var
   <div class="preco">
     <div class="de">Preço de lançamento</div>
     <div class="valor">R$ 17,90</div>
-    <div class="prazo">até segunda, 17/11, às 23h59 · depois R$ 24,90</div>
+    <div class="prazo">até terça, 17/11, às 23h59 · depois R$ 24,90</div>
     <a class="btn" href="https://pay.kiwify.com.br/2EZhXte">Quero o meu caderno</a>
     <div class="mini">Ebook em PDF (80 páginas) · acesso imediato após o pagamento · Pix, cartão ou boleto</div>
   </div>
@@ -123,5 +123,9 @@ footer{padding:26px 0 40px;font-family:Arial,sans-serif;font-size:13px;color:var
 <footer>Ervas do Quintal · @quintal_da_bene · Personagem criada com IA<br>Fonte técnica: Formulário de Fitoterápicos da Farmacopeia Brasileira, 3ª edição (Anvisa, 2026).</footer>
 </div>
 <div class="faixa"></div>
+<script>
+/* Repassa utm_*, src e sck da URL para os botoes da Kiwify (Fase 1.5, 12/11/2026) */
+(function(){try{var p=new URLSearchParams(location.search),k=new URLSearchParams();p.forEach(function(v,n){if(/^utm_|^(src|sck)$/i.test(n))k.set(n,v);});var s=k.toString();if(!s)return;document.querySelectorAll('a[href*="pay.kiwify.com.br"]').forEach(function(a){a.href+=(a.href.indexOf('?')<0?'?':'&')+s;});}catch(e){}})();
+</script>
 </body>
 </html>
